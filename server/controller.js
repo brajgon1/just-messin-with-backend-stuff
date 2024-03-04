@@ -14,6 +14,12 @@ module.exports = {
         const email = req.body.email;
         const newText = "Thanks for signing up! " + email;
         res.status(200).send(newText);
+    },
+
+    getAppt: (req, res) => {
+        const dateTime = req.body.dateTime;
+        console.log('Received Date and Time:', dateTime);
+        res.status(200).send(dateTime);
     }
 
 }
